@@ -1,16 +1,17 @@
 <!doctype html>
-<html lang="en-IN">
+<html lang="en-IN" data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#101510">
+  <meta name="theme-color" content="#151515">
   <meta name="description" content="Amol Kandekar’s portfolio of civil infrastructure, full-stack development, and applied data science. Explore his project case studies and career timeline.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Amol Kandekar | Infrastructure, Software & Data">
   <meta property="og:description" content="Civil infrastructure experience, full-stack development, and applied data science.">
   <title>Amol Kandekar | Infrastructure, Software & Data</title>
-  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/mark.svg?v=monochrome" type="image/svg+xml">
+  <script src="theme.js"></script>
+  <link rel="stylesheet" href="style.css?v=monochrome">
   <script src="script.js" defer></script>
 </head>
 <body>
@@ -25,7 +26,13 @@
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
       </nav>
-      <a class="button resume-top" href="assets/amol-kandekar-resume.pdf" download>Résumé <span class="download-icon" aria-hidden="true"></span></a>
+      <div class="topbar-actions">
+        <div class="theme-switch" role="group" aria-label="Color theme" hidden>
+          <button type="button" data-theme-choice="dark" aria-pressed="true">Dark</button>
+          <button type="button" data-theme-choice="black" aria-pressed="false">Black</button>
+        </div>
+        <a class="button resume-top" href="assets/amol-kandekar-resume.pdf" aria-label="Résumé" download><span class="resume-label">Résumé</span><span class="download-icon" aria-hidden="true"></span></a>
+      </div>
     </div>
     <div class="scroll-progress" aria-hidden="true"></div>
   </header>
