@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101510">
+  <meta name="description" content="Amol Kandekar’s portfolio of civil infrastructure, full-stack development, and applied data science. Explore his project case studies and career timeline.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Amol Kandekar | Infrastructure, Software & Data">
+  <meta property="og:description" content="Civil infrastructure experience, full-stack development, and applied data science.">
+  <title>Amol Kandekar | Infrastructure, Software & Data</title>
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="topbar">
+    <div class="topbar-inner wrap">
+      <a class="brand" href="#top" aria-label="Amol Kandekar, home"><span class="brand-mark" aria-hidden="true">AK</span><span>Amol Kandekar</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>Menu</button>
+      <nav id="site-nav" aria-label="Main navigation">
+        <a href="#work">Work</a>
+        <a href="#career">Career</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="button resume-top" href="assets/amol-kandekar-resume.pdf" download>Résumé <span class="download-icon" aria-hidden="true"></span></a>
+    </div>
+    <div class="scroll-progress" aria-hidden="true"></div>
+  </header>
+
+  <main id="main">
+    <section id="top" class="hero" aria-labelledby="hero-title">
+      <div class="hero-visual" aria-hidden="true">
+        <picture class="hero-image">
+          <source media="(max-width: 660px)" srcset="assets/terrain-small.webp">
+          <img src="assets/terrain.webp" alt="" fetchpriority="high" width="1672" height="941">
+        </picture>
+        <div class="hero-shadow"></div>
+        <div class="survey-grid"></div>
+        <div class="survey-scan"></div>
+        <div class="survey-point point-a"></div><div class="survey-point point-b"></div>
+      </div>
+      <div class="hero-inner wrap">
+        <div class="hero-copy">
+          <p class="eyebrow hero-kicker">Civil infrastructure <span></span> Software <span></span> Data</p>
+          <h1 id="hero-title">Amol<br>Kandekar<span>.</span></h1>
+          <p class="hero-intro">I’m a computer engineering graduate with a background in civil infrastructure. My work spans water supply projects, full-stack applications and predictive models.</p>
+          <div class="hero-links">
+            <a class="button primary" href="#work">Explore my work</a>
+            <a class="button glass" href="#career">Career timeline</a>
+          </div>
+        </div>
+        <div class="hero-foot">
+          <div class="hero-fact"><span class="location-icon" aria-hidden="true"></span><span>Sangamner, Maharashtra</span></div>
+          <button class="motion-toggle" type="button" aria-pressed="true" hidden><span class="motion-icon" aria-hidden="true"></span><span data-motion-label>Motion on</span></button>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="section work-section" aria-labelledby="work-title">
+      <div class="wrap">
+        <div class="section-heading reveal">
+          <div><p class="eyebrow">Project portfolio</p><h2 id="work-title">Selected work.</h2></div>
+          <p>Five projects across software, data science and civil engineering. Explore the work and run the public GitHub demos.</p>
+        </div>
+        <div class="project-grid">
+          <article class="project featured reveal" id="ehr">
+            <div class="project-visual photo ehr-photo" aria-hidden="true"><picture><source media="(max-width: 660px)" srcset="assets/hero-small.webp"><img src="assets/hero.webp" alt="" width="1672" height="941" loading="lazy"></picture></div>
+            <div class="project-content">
+              <p class="eyebrow project-meta"><span>Blockchain</span><span>Jul 2025–Present</span></p>
+              <h3>Blockchain Electronic Health Records</h3>
+              <p>I led a team building a decentralized healthcare app that gives patients control over who can access their records.</p>
+              <ul class="tags" aria-label="Technologies"><li>Ethereum</li><li>Solidity</li><li>IPFS</li><li>Node.js</li></ul>
+              <div class="project-actions"><a class="project-link" href="https://github.com/AmolVKandekar/Blockchain-Electronic-Health-Records">GitHub</a><a class="project-link case-link" href="#detail-ehr">Case study</a></div>
+            </div>
+            <div class="case-study" id="detail-ehr" hidden>
+              <p class="eyebrow">Team lead · Jul 2025–Present</p>
+              <h2>Blockchain Electronic Health Records</h2>
+              <p>We explored how patients could manage access to a record using Ethereum permissions and IPFS-backed storage. I led the project team and contributed to the smart contracts and role-based access.</p>
+              <h3>What the public demo shows</h3>
+              <p>Run a local Ethereum chain, create an encrypted sample record, and switch between patient and clinician views. A patient can grant or revoke read access, and the demo checks permission before serving the record.</p>
+              <p class="case-note">The portfolio demo uses fictional records and a local blockchain.</p>
+              <img class="case-preview" src="assets/ehr-preview.webp" width="1120" height="788" loading="lazy" alt="The EHR demo showing a record, patient permissions and Ethereum activity.">
+              <a class="button primary" href="https://github.com/AmolVKandekar/Blockchain-Electronic-Health-Records">Open GitHub repository</a>
+            </div>
+          </article>
+
+          <article class="project reveal" id="commerce">
+            <div class="project-visual photo commerce-photo" aria-hidden="true"><picture><source media="(max-width: 660px)" srcset="assets/workflow-small.webp"><img src="assets/workflow.webp" alt="" width="1672" height="941" loading="lazy"></picture></div>
+            <div class="project-content">
+              <p class="eyebrow project-meta"><span>Full stack</span><span>Feb–Mar 2025</span></p>
+              <h3>MERN E-commerce Platform</h3>
+              <p>Built vendor management and product discovery, then integrated authentication, payments and image storage during my EY GDS × Edunet internship.</p>
+              <ul class="tags" aria-label="Technologies"><li>React</li><li>Node.js</li><li>MongoDB</li><li>Stripe</li><li>Razorpay</li></ul>
+              <div class="project-actions"><a class="project-link" href="https://github.com/AmolVKandekar/MERN-Commerce-Platform">GitHub</a><a class="project-link case-link" href="#detail-commerce">Case study</a></div>
+            </div>
+            <div class="case-study" id="detail-commerce" hidden>
+              <p class="eyebrow">EY GDS × Edunet · Feb–Mar 2025</p>
+              <h2>MERN E-commerce Platform</h2>
+              <p>I built product discovery and vendor management in a MERN application. I added JWT authentication and access controls, integrated Stripe and Razorpay payments and Cloudinary image storage, and deployed the internship application on Vercel.</p>
+              <h3>What the public demo shows</h3>
+              <p>Browse a catalog, sign in as a shopper or vendor, create products and complete a demo order. MongoDB, Cloudinary and test-mode payments can be configured for integration testing.</p>
+              <img class="case-preview" src="assets/commerce-preview.webp" width="1120" height="788" loading="lazy" alt="The storefront after a demo order, with the matching product and paid order visible.">
+              <a class="button primary" href="https://github.com/AmolVKandekar/MERN-Commerce-Platform">Open GitHub repository</a>
+            </div>
+          </article>
+
+          <article class="project reveal" id="booking">
+            <div class="project-visual model-visual booking-visual">
+              <div class="model-grid" aria-hidden="true"></div>
+              <div class="model-metric"><strong>0.90</strong><span>ROC-AUC · résumé result</span></div>
+              <div class="model-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            </div>
+            <div class="project-content">
+              <p class="eyebrow project-meta"><span>Predictive modeling</span><span>2024</span></p>
+              <h3>Customer Booking Prediction</h3>
+              <p>Predicted holiday booking completion for a British Airways project using travel timing and customer behavior. The résumé reports 85% accuracy and 0.90 ROC-AUC.</p>
+              <ul class="tags" aria-label="Technologies"><li>Python</li><li>pandas</li><li>scikit-learn</li><li>Random Forest</li></ul>
+              <div class="project-actions"><a class="project-link" href="https://github.com/AmolVKandekar/Customer-Booking-Prediction">GitHub</a><a class="project-link case-link" href="#detail-booking">Case study</a></div>
+            </div>
+            <div class="case-study" id="detail-booking" hidden>
+              <p class="eyebrow">Applied data science · 2024</p>
+              <h2>Customer Booking Prediction</h2>
+              <p>I engineered temporal and behavioral features, trained a Random Forest model to predict booking completion, and visualized the main drivers in a business-style report.</p>
+              <p>The original résumé reports 85% accuracy and 0.90 ROC-AUC. The GitHub recreation has a reproducible holdout evaluation on generated booking data and records its own results.</p>
+              <a class="button primary" href="https://github.com/AmolVKandekar/Customer-Booking-Prediction">Open GitHub repository</a>
+            </div>
+          </article>
+
+          <article class="project reveal" id="attrition">
+            <div class="project-visual model-visual attrition-visual">
+              <div class="model-grid" aria-hidden="true"></div>
+              <div class="model-metric"><strong>92<span>%</span></strong><span>Accuracy · résumé result</span></div>
+              <div class="model-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            </div>
+            <div class="project-content">
+              <p class="eyebrow project-meta"><span>Predictive modeling</span><span>2024</span></p>
+              <h3>Customer Attrition Prediction</h3>
+              <p>Used transactional and demographic features to predict customer churn on a financial dataset. The résumé reports 92% accuracy.</p>
+              <ul class="tags" aria-label="Technologies"><li>Python</li><li>Random Forest</li><li>scikit-learn</li><li>Power BI</li></ul>
+              <div class="project-actions"><a class="project-link" href="https://github.com/AmolVKandekar/Customer-Attrition-Prediction">GitHub</a><a class="project-link case-link" href="#detail-attrition">Case study</a></div>
+            </div>
+            <div class="case-study" id="detail-attrition" hidden>
+              <p class="eyebrow">Applied data science · 2024</p>
+              <h2>Customer Attrition Prediction</h2>
+              <p>I used transactional and demographic data to engineer model features, then built visualizations in Python and Power BI to show what drove churn.</p>
+              <p>The original project reached 92% accuracy as reported in my résumé. The GitHub recreation generates synthetic financial data, evaluates a separate holdout set, and exports segment summaries for Power BI.</p>
+              <a class="button primary" href="https://github.com/AmolVKandekar/Customer-Attrition-Prediction">Open GitHub repository</a>
+            </div>
+          </article>
+
+          <article class="project reveal" id="samruddhi">
+            <div class="project-visual photo terrain-photo" aria-hidden="true"><img src="assets/terrain-small.webp" alt="" width="900" height="507" loading="lazy"></div>
+            <div class="project-content">
+              <p class="eyebrow project-meta"><span>Civil engineering research</span><span>2020</span></p>
+              <h3>Samruddhi Mahamarg Environmental Study</h3>
+              <p>Studied potential effects of the expressway on forest cover, air quality, wildlife movement and soil, then proposed mitigation measures.</p>
+              <ul class="tags" aria-label="Tools"><li>GIS</li><li>AutoCAD</li><li>Excel</li><li>Environmental research</li></ul>
+              <div class="project-actions"><a class="project-link" href="https://github.com/AmolVKandekar/Samruddhi-Mahamarg-Environmental-Study">GitHub</a><a class="project-link case-link" href="#detail-samruddhi">Case study</a></div>
+            </div>
+            <div class="case-study" id="detail-samruddhi" hidden>
+              <p class="eyebrow">Diploma research · 2020</p>
+              <h2>Samruddhi Mahamarg Environmental Study</h2>
+              <p>I conducted a civil engineering study of environmental risks along the Nagpur–Mumbai expressway, using AutoCAD for survey drawings, Excel for analysis and GIS for impact zones.</p>
+              <p>The public companion includes a sourced risk register and a reproducible map of illustrative assessment locations. It documents evidence gaps for each risk and includes GIS and spreadsheet exports.</p>
+              <div class="case-actions"><a class="button primary" href="demos/samruddhi/">Explore the screening map</a><a class="button secondary" href="https://github.com/AmolVKandekar/Samruddhi-Mahamarg-Environmental-Study">Open GitHub repository</a></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="career" class="section career-section" aria-labelledby="career-title">
+      <div class="wrap">
+        <div class="section-heading reveal">
+          <div><p class="eyebrow">Experience & education</p><h2 id="career-title">Career timeline.</h2></div>
+          <p>Follow my path from civil engineering and fieldwork in Maharashtra to software development and project leadership.</p>
+        </div>
+        <div class="timeline" data-timeline>
+          <div class="timeline-header">
+            <span class="timeline-span">2016–Present</span>
+            <button class="text-button" data-play type="button" hidden>Play timeline</button>
+          </div>
+          <div class="timeline-rail" aria-label="Career milestones" hidden>
+            <button type="button" id="tab-school" aria-controls="milestone-school" data-step><span>2017</span>School</button>
+            <button type="button" id="tab-diploma" aria-controls="milestone-diploma" data-step><span>2020</span>Diploma</button>
+            <button type="button" id="tab-survey" aria-controls="milestone-survey" data-step><span>2020</span>Survey & estimation</button>
+            <button type="button" id="tab-site" aria-controls="milestone-site" data-step><span>2022</span>Site engineering</button>
+            <button type="button" id="tab-data" aria-controls="milestone-data" data-step><span>2024</span>Data science</button>
+            <button type="button" id="tab-intern" aria-controls="milestone-intern" data-step><span>2025</span>Full-stack internship</button>
+            <button type="button" id="tab-degree" aria-controls="milestone-degree" data-step><span>2026</span>Computer engineering</button>
+            <button type="button" id="tab-ehr" aria-controls="milestone-ehr" data-step><span>Present</span>EHR team lead</button>
+          </div>
+          <div class="timeline-panels">
+            <article id="milestone-school" class="milestone"><p class="milestone-date">2016–2017</p><div><p class="eyebrow">H.S.Y. Vidyalay, Nimon</p><h3>Secondary School Certificate</h3><p>Completed my secondary schooling with 88.80%.</p></div></article>
+            <article id="milestone-diploma" class="milestone"><p class="milestone-date">2017–2020</p><div><p class="eyebrow">Amrutvahini Polytechnic, Sangamner</p><h3>Diploma in Civil Engineering</h3><p>Graduated with 92.53%. My diploma research examined environmental impacts along the Samruddhi Mahamarg corridor.</p><a class="project-link" href="#samruddhi">See the environmental study</a></div></article>
+            <article id="milestone-survey" class="milestone"><p class="milestone-date">Nov 2020–Aug 2022</p><div><p class="eyebrow">Mandlik Infracon Pvt. Ltd.</p><h3>Data & Estimation Analyst</h3><p>Analyzed DGPS and Total Station survey data for civil projects. Prepared cost estimates, Detailed Project Reports and Bills of Quantities for Jal Jeevan Mission water supply work.</p><ul class="tags"><li>ArcGIS</li><li>AutoCAD</li><li>Excel</li><li>Google Earth</li></ul></div></article>
+            <article id="milestone-site" class="milestone"><p class="milestone-date">Aug 2022–Jul 2023</p><div><p class="eyebrow">KK Thorat Infrastructure Pvt. Ltd.</p><h3>Project Engineer</h3><p>Supervised on-site water supply pipeline execution under Jal Jeevan Mission. Coordinated with engineers and local authorities and supported planning, quality checks and technical documentation.</p><ul class="tags"><li>Site supervision</li><li>Quality control</li><li>AutoCAD</li><li>Excel</li></ul></div></article>
+            <article id="milestone-data" class="milestone"><p class="milestone-date">2024</p><div><p class="eyebrow">Applied data science</p><h3>Booking and attrition models</h3><p>Built Random Forest models for two business problems. The booking study explored travel behavior, and the attrition study explored financial customer churn.</p><a class="project-link" href="#booking">See the prediction projects</a></div></article>
+            <article id="milestone-intern" class="milestone"><p class="milestone-date">Feb–Mar 2025</p><div><p class="eyebrow">EY GDS × Edunet (AICTE)</p><h3>Full Stack Intern</h3><p>Built and deployed a MERN e-commerce application with vendor management, role-based access, two payment integrations and Cloudinary image storage.</p><a class="project-link" href="#commerce">See the e-commerce project</a></div></article>
+            <article id="milestone-degree" class="milestone"><p class="milestone-date">2023–2026</p><div><p class="eyebrow">Amrutvahini College of Engineering, Sangamner</p><h3>B.E. in Computer Engineering</h3><p>Completed the degree with a CGPA of 8.74. As a Computer Engineering Student Association member, I helped organize seminars, hackathons and career sessions.</p></div></article>
+            <article id="milestone-ehr" class="milestone"><p class="milestone-date">Jul 2025–Present</p><div><p class="eyebrow">Academic project leadership</p><h3>Blockchain EHR Team Lead</h3><p>Led a team developing a decentralized health-records application with Ethereum smart contracts, role-based permissions and IPFS storage.</p><a class="project-link" href="#ehr">See the EHR project</a></div></article>
+          </div>
+          <div class="timeline-controls" hidden><button class="text-button" type="button" data-previous>Previous</button><button class="text-button" type="button" data-next>Next</button></div>
+          <div class="sr-only" aria-live="polite" data-announcement></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section skills-section" aria-labelledby="skills-title">
+      <div class="wrap">
+        <div class="section-heading reveal"><div><p class="eyebrow">Tools & methods</p><h2 id="skills-title">Technical skills.</h2></div></div>
+        <div class="skill-grid reveal">
+          <section><h3>Civil infrastructure</h3><ul class="tags"><li>AutoCAD</li><li>SketchUp</li><li>ArcGIS</li><li>Google Earth</li><li>DGPS</li><li>Total Station</li><li>DPR & BOQ</li><li>Site quality control</li></ul></section>
+          <section><h3>Software development</h3><ul class="tags"><li>JavaScript</li><li>React</li><li>Node.js</li><li>Express</li><li>MongoDB</li><li>MySQL</li><li>C++</li><li>Git & GitHub</li><li>Vercel</li></ul></section>
+          <section><h3>Data & analytics</h3><ul class="tags"><li>Python</li><li>pandas</li><li>NumPy</li><li>scikit-learn</li><li>Power BI</li><li>Tableau</li><li>Excel</li><li>Jupyter</li></ul></section>
+        </div>
+        <div class="recognition reveal">
+          <h3>Recognition & learning</h3>
+          <ul><li><strong>2nd place</strong><span>AI Visionary competition</span></li><li><strong>Participant</strong><span>Smart India Hackathon 2024</span></li><li><strong>Participant</strong><span>TechPragyan International Hackathon 2025</span></li><li><strong>IBM</strong><span>Machine Learning with Python</span></li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section" aria-labelledby="contact-title">
+      <div class="wrap contact-inner reveal">
+          <div class="contact-person"><img class="portrait" src="assets/portrait.webp" alt="Amol Kandekar" width="280" height="280" loading="lazy"><div><p class="eyebrow">Contact</p><h2 id="contact-title">Let’s connect.</h2><a class="email" href="mailto:amolkandekar40@gmail.com">amolkandekar40@gmail.com</a></div></div>
+        <div class="contact-links"><a class="button primary" href="mailto:amolkandekar40@gmail.com">Email me</a><a class="button secondary" href="https://www.linkedin.com/in/amolkandekar/">LinkedIn</a><a class="button secondary" href="https://github.com/AmolVKandekar">GitHub</a><a class="button secondary" href="assets/amol-kandekar-resume.pdf" download>Download résumé</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="wrap"><span>Amol Kandekar</span><a href="#top">Back to top</a></div></footer>
+  <dialog class="case-dialog" aria-labelledby="case-title"><div class="dialog-top"><button class="text-button" type="button" data-close>Close</button></div><div data-case-content></div></dialog>
+</body>
+</html>

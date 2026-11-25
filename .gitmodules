@@ -1,0 +1,15 @@
+[submodule "ehr"]
+	path = projects/ehr
+	url = https://github.com/AmolVKandekar/Blockchain-Electronic-Health-Records.git
+[submodule "commerce"]
+	path = projects/commerce
+	url = https://github.com/AmolVKandekar/MERN-Commerce-Platform.git
+[submodule "booking"]
+	path = projects/booking
+	url = https://github.com/AmolVKandekar/Customer-Booking-Prediction.git
+[submodule "attrition"]
+	path = projects/attrition
+	url = https://github.com/AmolVKandekar/Customer-Attrition-Prediction.git
+[submodule "samruddhi"]
+	path = projects/samruddhi
+	url = https://github.com/AmolVKandekar/Samruddhi-Mahamarg-Environmental-Study.git
