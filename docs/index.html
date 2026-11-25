@@ -4,15 +4,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#151515">
-  <meta name="description" content="Amol Kandekar’s portfolio of civil infrastructure, full-stack development, and applied data science. Explore his project case studies and career timeline.">
+  <meta name="description" content="Walk through Amol Kandekar’s career from civil engineering and fieldwork to computer engineering and AI automation. Explore project case studies and GitHub repositories.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Amol Kandekar | Infrastructure, Software & Data">
-  <meta property="og:description" content="Civil infrastructure experience, full-stack development, and applied data science.">
-  <title>Amol Kandekar | Infrastructure, Software & Data</title>
+  <meta property="og:title" content="Amol Kandekar | Career Journey">
+  <meta property="og:description" content="An interactive career journey from civil infrastructure to software and AI automation.">
+  <title>Amol Kandekar | Career Journey</title>
   <link rel="icon" href="assets/mark.svg?v=monochrome" type="image/svg+xml">
   <script src="theme.js"></script>
-  <link rel="stylesheet" href="style.css?v=monochrome">
-  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="style.css?v=journey">
+  <link rel="stylesheet" href="journey.css">
+  <script src="script.js?v=journey" defer></script>
+  <script src="journey.js" defer></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -21,8 +23,8 @@
       <a class="brand" href="#top" aria-label="Amol Kandekar, home"><span class="brand-mark" aria-hidden="true">AK</span><span>Amol Kandekar</span></a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>Menu</button>
       <nav id="site-nav" aria-label="Main navigation">
-        <a href="#work">Work</a>
-        <a href="#career">Career</a>
+        <a href="#career">Journey</a>
+        <a href="#work">Projects</a>
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -38,30 +40,156 @@
   </header>
 
   <main id="main">
-    <section id="top" class="hero" aria-labelledby="hero-title">
-      <div class="hero-visual" aria-hidden="true">
-        <picture class="hero-image">
-          <source media="(max-width: 660px)" srcset="assets/terrain-small.webp">
-          <img src="assets/terrain.webp" alt="" fetchpriority="high" width="1672" height="941">
-        </picture>
-        <div class="hero-shadow"></div>
-        <div class="survey-grid"></div>
-        <div class="survey-scan"></div>
-        <div class="survey-point point-a"></div><div class="survey-point point-b"></div>
-      </div>
-      <div class="hero-inner wrap">
-        <div class="hero-copy">
-          <p class="eyebrow hero-kicker">Civil infrastructure <span></span> Software <span></span> Data</p>
-          <h1 id="hero-title">Amol<br>Kandekar<span>.</span></h1>
-          <p class="hero-intro">I’m a computer engineering graduate with a background in civil infrastructure. My work spans water supply projects, full-stack applications and predictive models.</p>
-          <div class="hero-links">
-            <a class="button primary" href="#work">Explore my work</a>
-            <a class="button glass" href="#career">Career timeline</a>
+    <section id="top" class="journey-section" aria-labelledby="hero-title">
+      <div class="wrap">
+        <header class="journey-heading">
+          <div>
+            <p class="eyebrow">Sangamner, Maharashtra</p>
+            <h1 id="hero-title">Amol Kandekar<span>.</span></h1>
           </div>
-        </div>
-        <div class="hero-foot">
-          <div class="hero-fact"><span class="location-icon" aria-hidden="true"></span><span>Sangamner, Maharashtra</span></div>
-          <button class="motion-toggle" type="button" aria-pressed="true" hidden><span class="motion-icon" aria-hidden="true"></span><span data-motion-label>Motion on</span></button>
+          <p>I started in civil engineering. Today, I build AI automation for design workflows. Walk across the bridge to see how I got here.</p>
+        </header>
+
+        <div id="career" class="journey" data-journey>
+          <div class="walk-stage" data-stage data-scene="bridge" role="region" aria-label="Career journey scene" aria-describedby="walk-instructions">
+            <div class="stage-scenes" aria-hidden="true">
+              <picture class="stage-scene scene-bridge">
+                <source media="(max-width: 660px)" srcset="assets/journey-bridge-small.webp">
+                <img src="assets/journey-bridge.webp" alt="" fetchpriority="high" width="1672" height="941">
+              </picture>
+              <div class="stage-scene scene-campus">
+                <div class="campus-landscape">
+                  <picture>
+                    <source media="(max-width: 660px)" srcset="assets/journey-campus-small.webp">
+                    <img src="assets/journey-campus.webp" alt="" decoding="async" width="1672" height="941">
+                  </picture>
+                  <div class="stage-portal">
+                    <span class="portal-door portal-left"></span>
+                    <span class="portal-door portal-right"></span>
+                  </div>
+                </div>
+              </div>
+              <picture class="stage-scene scene-workshop">
+                <source media="(max-width: 660px)" srcset="assets/hero-small.webp">
+                <img src="assets/hero.webp" alt="" decoding="async" width="1672" height="941">
+              </picture>
+            </div>
+            <div class="stage-shade" aria-hidden="true"></div>
+            <div class="stage-heading" aria-hidden="true">
+              <span class="eyebrow" data-scene-date>2020</span>
+              <strong data-scene-label>Civil engineering diploma</strong>
+            </div>
+            <div class="stage-actions" data-stage-actions>
+              <div class="stage-companies" data-stage-companies role="group" aria-label="Civil engineering employers" hidden>
+                <button type="button" aria-controls="milestone-survey" aria-expanded="false"><strong>Mandlik Infracon Pvt. Ltd.</strong><span>Survey &amp; estimation</span></button>
+                <button type="button" aria-controls="milestone-site" aria-expanded="false"><strong>KK Thorat Infrastructure Pvt. Ltd.</strong><span>Pipeline execution</span></button>
+              </div>
+            </div>
+            <div class="stage-deck" aria-hidden="true"></div>
+            <div class="stage-track" aria-hidden="true">
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="walker" data-walker aria-hidden="true" hidden><span class="walker-shadow"></span><span class="walker-sprite" data-walker-sprite></span></div>
+          </div>
+
+          <div class="walk-controls" data-walk-controls hidden>
+            <div class="walk-buttons">
+              <button class="button secondary" type="button" data-walk-back>Back</button>
+              <button class="button primary" type="button" data-walk-forward>Walk forward</button>
+              <button class="button primary" type="button" data-walk-reset hidden>Walk again</button>
+            </div>
+            <p id="walk-instructions">Use the buttons or arrow keys on the scene.</p>
+            <button class="motion-toggle" type="button" aria-pressed="true" hidden><span class="motion-icon" aria-hidden="true"></span><span data-motion-label>Motion on</span></button>
+          </div>
+
+          <ol class="walk-stops" aria-label="Career stops" data-walk-stops hidden>
+            <li><button type="button" data-stop aria-controls="milestone-diploma"><span>2020</span>Diploma</button></li>
+            <li><button type="button" data-stop aria-controls="milestone-field"><span>2020–2023</span>Field work</button></li>
+            <li><button type="button" data-stop aria-controls="milestone-turn"><span>2023</span>Career choice</button></li>
+            <li><button type="button" data-stop aria-controls="milestone-degree"><span>2023–2026</span>Computer engineering</button></li>
+            <li><button type="button" data-stop aria-controls="milestone-automation"><span>Jul 2026</span>AI automation</button></li>
+          </ol>
+
+          <div class="journey-panels">
+            <article class="journey-panel" id="milestone-diploma" data-panel data-scene="bridge" data-label="Civil engineering diploma">
+              <p class="eyebrow" data-date>2020</p>
+              <h2>Diploma in Civil Engineering</h2>
+              <p>I completed my diploma at Amrutvahini Polytechnic, Sangamner, with 92.53%. For my diploma project, I studied the environmental effects of the Samruddhi Mahamarg using survey drawings, GIS and Excel.</p>
+              <div class="journey-links">
+                <a class="button secondary case-link" href="#detail-samruddhi">Samruddhi Mahamarg case study</a>
+                <a class="project-link" href="demos/samruddhi/">Explore the environmental map</a>
+              </div>
+            </article>
+
+            <article class="journey-panel" id="milestone-field" data-panel data-scene="bridge" data-label="Civil engineering in the field">
+              <p class="eyebrow" data-date>Nov 2020–Jul 2023</p>
+              <h2>From survey data to site work</h2>
+              <p>I worked on Jal Jeevan Mission water supply projects, first preparing estimates and reports, then supervising pipeline execution.</p>
+              <div class="company-grid">
+                <details class="company-card" id="milestone-survey">
+                  <summary>
+                    <img src="assets/journey-survey.webp" alt="" loading="lazy" width="720" height="405">
+                    <span class="company-title"><span class="eyebrow">Nov 2020–Aug 2022</span><strong>Mandlik Infracon Pvt. Ltd.</strong><span>Data &amp; Estimation Analyst</span></span>
+                  </summary>
+                  <div class="company-work">
+                    <ul>
+                      <li>Analyzed land survey data from DGPS and Total Station measurements.</li>
+                      <li>Prepared cost estimates, Detailed Project Reports and Bills of Quantities for water supply work.</li>
+                      <li>Used ArcGIS, AutoCAD, Excel and Google Earth for mapping and analysis.</li>
+                    </ul>
+                  </div>
+                </details>
+                <details class="company-card" id="milestone-site">
+                  <summary>
+                    <img src="assets/journey-pipeline.webp" alt="" loading="lazy" width="720" height="405">
+                    <span class="company-title"><span class="eyebrow">Aug 2022–Jul 2023</span><strong>KK Thorat Infrastructure Pvt. Ltd.</strong><span>Project Engineer</span></span>
+                  </summary>
+                  <div class="company-work">
+                    <ul>
+                      <li>Supervised on-site execution of water supply pipelines under Jal Jeevan Mission.</li>
+                      <li>Coordinated with engineers and local authorities on progress and compliance.</li>
+                      <li>Supported planning, quality checks and technical documentation.</li>
+                    </ul>
+                  </div>
+                </details>
+              </div>
+            </article>
+
+            <article class="journey-panel" id="milestone-turn" data-panel data-scene="campus" data-label="Choosing the next path">
+              <p class="eyebrow" data-date>2023</p>
+              <h2>Choosing computer engineering</h2>
+              <p>On site, I saw how much effort went into turning field measurements into drawings, estimates and reports. I wanted to understand how software worked and find out what computers and AI could do for problems I had seen in civil engineering.</p>
+              <div class="path-choices" id="path-choices" data-path-choices>
+                <a class="path-choice" href="#milestone-field" data-path="civil"><strong>Civil engineering</strong><span>Revisit the surveying and pipeline work.</span></a>
+                <a class="path-choice" href="#milestone-degree" data-path="computer"><strong>Computer engineering</strong><span>Follow the path I chose.</span></a>
+              </div>
+            </article>
+
+            <article class="journey-panel" id="milestone-degree" data-panel data-scene="campus" data-label="Building software and data projects">
+              <p class="eyebrow" data-date>2023–2026</p>
+              <h2>B.E. in Computer Engineering</h2>
+              <p>At Amrutvahini College of Engineering, Sangamner, I learned by building applications and testing them with data. I graduated with a CGPA of 8.74.</p>
+              <div class="study-grid">
+                <a class="case-link study-card" href="#detail-booking"><span class="eyebrow">2024</span><strong>Customer Booking Prediction</strong><span>Modeled completion of travel bookings.</span></a>
+                <a class="case-link study-card" href="#detail-attrition"><span class="eyebrow">2024</span><strong>Customer Attrition Prediction</strong><span>Modeled customer churn using financial data.</span></a>
+                <a class="case-link study-card" href="#detail-commerce" id="milestone-intern"><span class="eyebrow">Feb–Mar 2025</span><strong>EY GDS × Edunet (AICTE)</strong><span>Built a MERN e-commerce app as a Full Stack Intern.</span></a>
+                <a class="case-link study-card" href="#detail-ehr" id="milestone-ehr"><span class="eyebrow">Jul 2025–Present</span><strong>Blockchain Electronic Health Records</strong><span>Led the team working on patient-controlled records.</span></a>
+              </div>
+            </article>
+
+            <article class="journey-panel" id="milestone-automation" data-panel data-scene="workshop" data-label="AI automation for design work">
+              <p class="eyebrow" data-date>Jul 2026–Present</p>
+              <h2>AI Automation Engineer</h2>
+              <p class="journey-company">Mandlik Infracon India Pvt. Ltd.</p>
+              <p>I build multi-step n8n workflows and develop an AI agent for internal design tasks. I use Codex to write and test supporting code, including tools that simplify repeated steps in 3D drawing workflows.</p>
+              <ul class="tags" aria-label="Tools"><li>n8n</li><li>AI agent development</li><li>Codex</li><li>Design workflows</li></ul>
+              <div class="journey-links">
+                <a class="button secondary" href="#work">Explore the projects</a>
+                <a class="project-link" href="#contact">Get in touch</a>
+              </div>
+            </article>
+          </div>
+          <p class="sr-only" role="status" data-walk-status></p>
         </div>
       </div>
     </section>
@@ -179,43 +307,6 @@
       </div>
     </section>
 
-    <section id="career" class="section career-section" aria-labelledby="career-title">
-      <div class="wrap">
-        <div class="section-heading reveal">
-          <div><p class="eyebrow">Experience & education</p><h2 id="career-title">Career timeline.</h2></div>
-          <p>Follow my path from civil engineering and fieldwork in Maharashtra to software development and project leadership.</p>
-        </div>
-        <div class="timeline" data-timeline>
-          <div class="timeline-header">
-            <span class="timeline-span">2016–Present</span>
-            <button class="text-button" data-play type="button" hidden>Play timeline</button>
-          </div>
-          <div class="timeline-rail" aria-label="Career milestones" hidden>
-            <button type="button" id="tab-school" aria-controls="milestone-school" data-step><span>2017</span>School</button>
-            <button type="button" id="tab-diploma" aria-controls="milestone-diploma" data-step><span>2020</span>Diploma</button>
-            <button type="button" id="tab-survey" aria-controls="milestone-survey" data-step><span>2020</span>Survey & estimation</button>
-            <button type="button" id="tab-site" aria-controls="milestone-site" data-step><span>2022</span>Site engineering</button>
-            <button type="button" id="tab-data" aria-controls="milestone-data" data-step><span>2024</span>Data science</button>
-            <button type="button" id="tab-intern" aria-controls="milestone-intern" data-step><span>2025</span>Full-stack internship</button>
-            <button type="button" id="tab-degree" aria-controls="milestone-degree" data-step><span>2026</span>Computer engineering</button>
-            <button type="button" id="tab-ehr" aria-controls="milestone-ehr" data-step><span>Present</span>EHR team lead</button>
-          </div>
-          <div class="timeline-panels">
-            <article id="milestone-school" class="milestone"><p class="milestone-date">2016–2017</p><div><p class="eyebrow">H.S.Y. Vidyalay, Nimon</p><h3>Secondary School Certificate</h3><p>Completed my secondary schooling with 88.80%.</p></div></article>
-            <article id="milestone-diploma" class="milestone"><p class="milestone-date">2017–2020</p><div><p class="eyebrow">Amrutvahini Polytechnic, Sangamner</p><h3>Diploma in Civil Engineering</h3><p>Graduated with 92.53%. My diploma research examined environmental impacts along the Samruddhi Mahamarg corridor.</p><a class="project-link" href="#samruddhi">See the environmental study</a></div></article>
-            <article id="milestone-survey" class="milestone"><p class="milestone-date">Nov 2020–Aug 2022</p><div><p class="eyebrow">Mandlik Infracon Pvt. Ltd.</p><h3>Data & Estimation Analyst</h3><p>Analyzed DGPS and Total Station survey data for civil projects. Prepared cost estimates, Detailed Project Reports and Bills of Quantities for Jal Jeevan Mission water supply work.</p><ul class="tags"><li>ArcGIS</li><li>AutoCAD</li><li>Excel</li><li>Google Earth</li></ul></div></article>
-            <article id="milestone-site" class="milestone"><p class="milestone-date">Aug 2022–Jul 2023</p><div><p class="eyebrow">KK Thorat Infrastructure Pvt. Ltd.</p><h3>Project Engineer</h3><p>Supervised on-site water supply pipeline execution under Jal Jeevan Mission. Coordinated with engineers and local authorities and supported planning, quality checks and technical documentation.</p><ul class="tags"><li>Site supervision</li><li>Quality control</li><li>AutoCAD</li><li>Excel</li></ul></div></article>
-            <article id="milestone-data" class="milestone"><p class="milestone-date">2024</p><div><p class="eyebrow">Applied data science</p><h3>Booking and attrition models</h3><p>Built Random Forest models for two business problems. The booking study explored travel behavior, and the attrition study explored financial customer churn.</p><a class="project-link" href="#booking">See the prediction projects</a></div></article>
-            <article id="milestone-intern" class="milestone"><p class="milestone-date">Feb–Mar 2025</p><div><p class="eyebrow">EY GDS × Edunet (AICTE)</p><h3>Full Stack Intern</h3><p>Built and deployed a MERN e-commerce application with vendor management, role-based access, two payment integrations and Cloudinary image storage.</p><a class="project-link" href="#commerce">See the e-commerce project</a></div></article>
-            <article id="milestone-degree" class="milestone"><p class="milestone-date">2023–2026</p><div><p class="eyebrow">Amrutvahini College of Engineering, Sangamner</p><h3>B.E. in Computer Engineering</h3><p>Completed the degree with a CGPA of 8.74. As a Computer Engineering Student Association member, I helped organize seminars, hackathons and career sessions.</p></div></article>
-            <article id="milestone-ehr" class="milestone"><p class="milestone-date">Jul 2025–Present</p><div><p class="eyebrow">Academic project leadership</p><h3>Blockchain EHR Team Lead</h3><p>Led a team developing a decentralized health-records application with Ethereum smart contracts, role-based permissions and IPFS storage.</p><a class="project-link" href="#ehr">See the EHR project</a></div></article>
-          </div>
-          <div class="timeline-controls" hidden><button class="text-button" type="button" data-previous>Previous</button><button class="text-button" type="button" data-next>Next</button></div>
-          <div class="sr-only" aria-live="polite" data-announcement></div>
-        </div>
-      </div>
-    </section>
-
     <section id="skills" class="section skills-section" aria-labelledby="skills-title">
       <div class="wrap">
         <div class="section-heading reveal"><div><p class="eyebrow">Tools & methods</p><h2 id="skills-title">Technical skills.</h2></div></div>
@@ -223,6 +314,7 @@
           <section><h3>Civil infrastructure</h3><ul class="tags"><li>AutoCAD</li><li>SketchUp</li><li>ArcGIS</li><li>Google Earth</li><li>DGPS</li><li>Total Station</li><li>DPR & BOQ</li><li>Site quality control</li></ul></section>
           <section><h3>Software development</h3><ul class="tags"><li>JavaScript</li><li>React</li><li>Node.js</li><li>Express</li><li>MongoDB</li><li>MySQL</li><li>C++</li><li>Git & GitHub</li><li>Vercel</li></ul></section>
           <section><h3>Data & analytics</h3><ul class="tags"><li>Python</li><li>pandas</li><li>NumPy</li><li>scikit-learn</li><li>Power BI</li><li>Tableau</li><li>Excel</li><li>Jupyter</li></ul></section>
+          <section><h3>AI automation</h3><ul class="tags"><li>n8n</li><li>AI agents</li><li>Codex</li><li>Workflow automation</li></ul></section>
         </div>
         <div class="recognition reveal">
           <h3>Recognition & learning</h3>

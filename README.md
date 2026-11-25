@@ -2,13 +2,12 @@
 
 [Open the animated portfolio](https://amolvkandekar.github.io/Amol-Kandekar-Portfolio/)
 
-My experience spans civil infrastructure delivery, full-stack development and applied data science. The portfolio follows my education and work from Sangamner-based survey and site roles through computer engineering and the blockchain EHR project.
+My portfolio begins with my civil engineering diploma. Walk across the bridge to see my survey and site work, choose the path I took into computer engineering, and end at my current AI automation role.
 
 ## Career timeline
 
 | Dates | Milestone |
 | --- | --- |
-| 2016–2017 | Secondary School Certificate, H.S.Y. Vidyalay, Nimon |
 | 2017–2020 | Diploma in Civil Engineering, Amrutvahini Polytechnic |
 | Nov 2020–Aug 2022 | Data & Estimation Analyst, Mandlik Infracon Pvt. Ltd. |
 | Aug 2022–Jul 2023 | Project Engineer, KK Thorat Infrastructure Pvt. Ltd. |
@@ -16,6 +15,7 @@ My experience spans civil infrastructure delivery, full-stack development and ap
 | 2024 | Customer booking and financial attrition prediction projects |
 | Feb–Mar 2025 | Full Stack Intern, EY GDS × Edunet (AICTE) |
 | Jul 2025–Present | Team lead on the Blockchain Electronic Health Records project |
+| Jul 2026–Present | AI Automation Engineer, Mandlik Infracon India Pvt. Ltd. |
 
 ## Project source
 
@@ -35,7 +35,7 @@ The project repositories contain reproducible portfolio demos. The prediction pr
     cd Amol-Kandekar-Portfolio
     python -m http.server 8765 --bind 127.0.0.1 --directory docs
 
-Open `http://127.0.0.1:8765`. Git submodules pin the project source revisions. GitHub Pages serves the static site from `docs/`, including the HTML timeline, CSS, JavaScript, and the public résumé copy.
+Open `http://127.0.0.1:8765`. Git submodules pin the project source revisions. GitHub Pages serves the career journey, project case studies, and public résumé copy from `docs/`. Use the buttons or keyboard arrows on the scene to move between stops.
 
 ## Artwork
 
@@ -61,3 +61,37 @@ Use case: product-mockup. Asset type: full-bleed photographic hero for an AI aut
 **Glass modules**
 
 Use case: product-mockup. Asset type: landscape case-study art for an engineering portfolio, wide 16:9. Photorealistic macro still life on a matte black engineering bench: small transparent smoked glass slabs suspended above square dark graphite bases at four points, arranged in an asymmetric workflow along tiny etched copper and emerald circuit traces. One central glass slab catches a warm gold light, the rest are mint-lit edge reflections. Strong directional studio light with very deep shadows, tangible brushed finish, refined technical photography matching a dark editorial portfolio. Compose the arrangement in the middle of the frame with space around it. No text, no logos, no people, no interface, no watermark.
+
+## Journey artwork
+
+The bridge, campus, character and fieldwork images were generated with ImageGen. The fieldwork images illustrate the work described in the résumé.
+
+| Illustration | Asset |
+| --- | --- |
+| Bridge | `docs/assets/journey-bridge.webp` |
+| Engineering campus | `docs/assets/journey-campus.webp` |
+| Walking character | `docs/assets/journey-walk.webp` |
+| Surveying | `docs/assets/journey-survey.webp` |
+| Pipeline work | `docs/assets/journey-pipeline.webp` |
+
+### Journey scene prompts
+
+**Bridge**
+
+Use case: photorealistic-natural. Asset type: wide 16:9 background plate for a side-scrolling engineering career story. A realistic concrete highway bridge over a quiet valley in Maharashtra, photographed from a perpendicular side view at deck level at twilight. The long walkable bridge deck and slender rails run almost perfectly HORIZONTAL all the way across the foreground, from the frame's left edge to its right edge, with the deck near 78 percent down from the top. Layered basalt hills, river haze and a few concrete piers recede behind it. On the distant right bank is a small modern engineering campus building, below the skyline. The left and upper areas have deep charcoal negative space for readable web text. Mid-contrast clouds, crisp real road/building materials, luminous naturally lit mist, architectural photography with tactile realistic texture. Strict black and white monochrome, no color accents. Empty environment, no people, no cars, no signs, no lettering, no UI, no watermark. Keep the water and bridge geometry physically plausible.
+
+**Engineering campus**
+
+Use case: photorealistic-natural. Asset type: wide 16:9 background plate for a career story. Photorealistic, cinematic architectural photograph, straight-on elevation viewed from a distance of a modern engineering campus entrance at evening in Maharashtra. Polished graphite concrete, rhythmic glass fins and a heavy flat canopy. Two adjacent tall dark glass entrances at the center-right, subtly lit from within, no signs or lettering. The forecourt is an empty horizontal concrete surface at approximately 78 percent of the frame height, for a sidewalking character to stand on. Deep charcoal lighting to the left leaves copy space, a little light glows inside the building but no bright blown-out panels. Strict black and white monochrome. Premium realistic architectural photography. No people, no typography, no UI, no logos, no watermark.
+
+**Walking character**
+
+Use case: stylized-concept. Asset type: transparent side-scrolling character sprite atlas. Exactly EIGHT full-body depictions of the SAME young Indian male engineering student in a black field jacket, charcoal trousers, dark walking shoes and a small gray backpack, facing to the RIGHT in every pose. Orthographic true side view. Precisely organized in a rigid 4-column by 2-row grid, with very wide equal gutters and each character wholly inside one cell. All characters are exactly the same size and their feet use the same ground height relative to their particular cell. The poses form a sequential ordinary forward walking cycle, from left to right in row one, then left to right in row two: right leg reaches forward, right heel touches, support knee bends, left foot passes, left leg reaches forward, left heel touches, support knee bends, right foot passes. Natural alternating arm swing. Natural proportions and realistic folds and highlights, crisp charcoal-and-silver clothing with clear silhouette. Black and white monochrome. Genuine transparent background. Exactly 8 characters, no other objects, no frame lines, no text, no graphics, no ground shadows. Do not crop bodies.
+
+**Surveying**
+
+Use case: photorealistic-natural. Asset type: wide 16:9 project-card background for civil surveying. Authentic monochrome documentary photograph of a total station survey instrument mounted on a tripod beside a rural Maharashtra water infrastructure site. The instrument is clear at frame right and subtle contour ridges recede behind it. Soft overcast light, dark graphite foreground and real tactile materials, quiet professional site photography. No people, no branding, no labels, no text, no logos, no watermark. An illustrative location.
+
+**Pipeline work**
+
+Use case: photorealistic-natural. Asset type: wide 16:9 project-card background for civil construction. Authentic monochrome documentary photograph of a safely empty water pipeline installation trench with a large pipe section laid along the center-right of frame near a rural road in Maharashtra. Layered exposed soil, daylight on overcast afternoon, natural engineering materials, restrained charcoal shadows, and a quiet infrastructure site. No people, no branding, no labels, no text, no logos, no watermark. An illustrative location.
