@@ -12,9 +12,9 @@
   <link rel="icon" href="assets/mark.svg?v=monochrome" type="image/svg+xml">
   <script src="theme.js"></script>
   <link rel="stylesheet" href="style.css?v=journey">
-  <link rel="stylesheet" href="journey.css">
+  <link rel="stylesheet" href="journey.css?v=play">
   <script src="script.js?v=journey" defer></script>
-  <script src="journey.js" defer></script>
+  <script src="journey.js?v=play" defer></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -47,7 +47,7 @@
             <p class="eyebrow">Sangamner, Maharashtra</p>
             <h1 id="hero-title">Amol Kandekar<span>.</span></h1>
           </div>
-          <p>I started in civil engineering. Today, I build AI automation for design workflows. Walk across the bridge to see how I got here.</p>
+          <p>I started in civil engineering. Today, I build AI automation for design workflows. Guide me across the bridge to see how I got here.</p>
         </header>
 
         <div id="career" class="journey" data-journey>
@@ -94,11 +94,14 @@
 
           <div class="walk-controls" data-walk-controls hidden>
             <div class="walk-buttons">
-              <button class="button secondary" type="button" data-walk-back>Back</button>
-              <button class="button primary" type="button" data-walk-forward>Walk forward</button>
+              <div class="move-buttons" role="group" aria-label="Character movement">
+                <button class="button secondary" type="button" data-move="-1" aria-label="Move left">Left</button>
+                <button class="button secondary" type="button" data-move="1" aria-label="Move right">Right</button>
+              </div>
+              <button class="button primary" type="button" data-walk-forward>Next stop</button>
               <button class="button primary" type="button" data-walk-reset hidden>Walk again</button>
             </div>
-            <p id="walk-instructions">Use the buttons or arrow keys on the scene.</p>
+            <p id="walk-instructions">Hold Left or Right to walk. With the scene focused, use A/D or the arrow keys. Press E to interact.</p>
             <button class="motion-toggle" type="button" aria-pressed="true" hidden><span class="motion-icon" aria-hidden="true"></span><span data-motion-label>Motion on</span></button>
           </div>
 

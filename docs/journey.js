@@ -8,7 +8,7 @@
   const stopsList = journey.querySelector('[data-walk-stops]');
   const stops = Array.from(stopsList.querySelectorAll('[data-stop]'));
   const panels = stops.map(stop => document.getElementById(stop.getAttribute('aria-controls')));
-  const back = journey.querySelector('[data-walk-back]');
+  const moveButtons = journey.querySelectorAll('[data-move]');
   const forward = journey.querySelector('[data-walk-forward]');
   const reset = journey.querySelector('[data-walk-reset]');
   const paths = journey.querySelector('[data-path-choices]');
@@ -16,11 +16,14 @@
   const crossroads = panels.findIndex(panel => panel.id === 'milestone-turn');
   const college = panels.findIndex(panel => panel.id === 'milestone-degree');
   const last = stops.length - 1;
+  const directions = new Map([['arrowleft', -1], ['a', -1], ['arrowright', 1], ['d', 1]]);
   let active = 0;
   let destination = null;
   let position = 12;
   let animation;
   let gateOpen = false;
+  let computerPath = false;
+  let driver = null;
 
   const marker = index => 12 + (76 * index) / last;
   const reduceMotion = () => document.body.classList.contains('motion-off');
@@ -35,7 +38,7 @@
   function updateGate() {
     paths.hidden = active !== crossroads || !gateOpen;
     stage.dataset.gate = active === college || (active === crossroads && gateOpen) ? 'open' : 'closed';
-    forward.textContent = active === crossroads ? (gateOpen ? 'Choose a path' : 'Open the building') : 'Walk forward';
+    forward.textContent = active === crossroads ? (gateOpen ? 'Choose a path' : 'Open the building') : 'Next stop';
     if (active === crossroads) {
       forward.setAttribute('aria-controls', paths.id);
       forward.setAttribute('aria-expanded', String(gateOpen));
@@ -59,7 +62,6 @@
     companies.hidden = selected.id !== 'milestone-field';
     sceneDate.textContent = selected.querySelector('[data-date]').textContent;
     sceneLabel.textContent = selected.dataset.label;
-    back.disabled = index === 0;
     forward.hidden = index === last;
     reset.hidden = index !== last;
     updateGate();
@@ -89,8 +91,11 @@
   }
 
   function walkTo(index) {
-    if (index < 0 || index > last || index === destination || (index === active && destination === null)) return;
+    if (index < 0 || index > last || index === destination) return;
+    if (index === active && destination === null && Math.abs(position - marker(index)) < 1) return;
+    stopDriving();
     cancelAnimationFrame(animation);
+    if (index >= college) computerPath = true;
     destination = index;
     const start = position;
     const distance = marker(index) - start;
@@ -130,6 +135,49 @@
     status.textContent = 'The building is open. Choose civil engineering or computer engineering.';
   }
 
+  function moveOneStop(direction) {
+    if (destination !== null) return;
+    if (direction === 1) walkForward();
+    else walkTo(active - 1);
+  }
+
+  function stopDriving(input) {
+    if (!driver || (input && driver !== input)) return;
+    cancelAnimationFrame(animation);
+    driver = null;
+    draw(position);
+  }
+
+  function startDriving(direction, input) {
+    if (destination !== null || driver === input) return;
+    if (reduceMotion()) {
+      moveOneStop(direction);
+      return;
+    }
+    stopDriving();
+    const edge = direction === -1 ? marker(0) : marker(computerPath ? last : crossroads);
+    if ((edge - position) * direction <= 0) return;
+
+    driver = input;
+    walker.style.setProperty('--walker-facing', String(direction));
+    let previous = performance.now() - 17;
+    let strideTime = 0;
+    function move(time) {
+      const elapsed = Math.min(45, Math.max(0, time - previous));
+      previous = time;
+      strideTime += elapsed;
+      const offset = position + direction * .024 * elapsed;
+      const x = direction === 1 ? Math.min(edge, offset) : Math.max(edge, offset);
+      draw(x, Math.floor(strideTime / 93) % 8);
+
+      const next = active + direction;
+      if (next >= 0 && next <= last && (x - marker(next)) * direction >= 0) revealStop(next);
+      if (x === edge) stopDriving(input);
+      else animation = requestAnimationFrame(move);
+    }
+    move(performance.now());
+  }
+
   function stopFromHash() {
     const target = document.getElementById(location.hash.slice(1));
     return panels.indexOf(target?.closest('[data-panel]'));
@@ -138,11 +186,12 @@
   journey.classList.add('is-ready');
   stage.querySelector('[data-stage-actions]').append(paths);
   stage.tabIndex = 0;
-  stage.setAttribute('aria-keyshortcuts', 'ArrowLeft ArrowRight');
+  stage.setAttribute('aria-keyshortcuts', 'ArrowLeft ArrowRight A D E');
   journey.querySelector('[data-walk-controls]').hidden = false;
   stopsList.hidden = false;
   walker.hidden = false;
   const start = Math.max(0, stopFromHash());
+  computerPath = start >= college;
   draw(marker(start));
   revealStop(start, false);
   const initialDetails = document.getElementById(location.hash.slice(1));
@@ -161,32 +210,63 @@
       company.scrollIntoView({ block: 'nearest', behavior: reduceMotion() ? 'instant' : 'smooth' });
     });
   }
-  back.addEventListener('click', () => {
-    if (destination === null) walkTo(active - 1);
-  });
+  for (const button of moveButtons) {
+    const direction = Number(button.dataset.move);
+    button.addEventListener('pointerdown', event => {
+      if (!event.isPrimary || event.button !== 0) return;
+      button.setPointerCapture(event.pointerId);
+      startDriving(direction, 'pointer:' + event.pointerId);
+    });
+    for (const type of ['pointerup', 'pointercancel', 'lostpointercapture']) {
+      button.addEventListener(type, event => stopDriving('pointer:' + event.pointerId));
+    }
+    button.addEventListener('contextmenu', event => event.preventDefault());
+    button.addEventListener('click', event => {
+      if (event.detail === 0) moveOneStop(direction);
+    });
+  }
   forward.addEventListener('click', walkForward);
   reset.addEventListener('click', () => {
     gateOpen = false;
+    computerPath = false;
     walkTo(0);
   });
   paths.addEventListener('click', event => {
     const link = event.target.closest('[data-path]');
     if (!link || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
     event.preventDefault();
+    if (link.dataset.path === 'civil') computerPath = false;
     const next = panels.findIndex(panel => '#' + panel.id === link.hash);
     walkTo(next);
   });
   stage.addEventListener('keydown', event => {
-    if (event.key === 'ArrowRight') {
-      event.preventDefault();
-      walkForward();
-    } else if (event.key === 'ArrowLeft') {
-      event.preventDefault();
-      if (destination === null) walkTo(active - 1);
+    if (event.target !== stage || event.metaKey || event.ctrlKey || event.altKey) return;
+    const key = event.key.toLowerCase();
+    const direction = directions.get(key);
+    if (!direction && key !== 'e') return;
+    event.preventDefault();
+    if (event.repeat) return;
+    if (direction) {
+      startDriving(direction, 'key:' + key);
+      return;
     }
+    stopDriving();
+    if (active === crossroads) walkForward();
+    else if (!companies.hidden) companies.querySelector('button').focus();
+    else panels[active].querySelector('a')?.focus();
+  });
+  stage.addEventListener('blur', () => {
+    if (driver?.startsWith('key:')) stopDriving();
+  });
+  window.addEventListener('keyup', event => stopDriving('key:' + event.key.toLowerCase()));
+  window.addEventListener('blur', () => stopDriving());
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) stopDriving();
   });
   document.addEventListener('portfolio-motion', () => {
-    if (reduceMotion() && destination !== null) arrive(destination);
+    if (!reduceMotion()) return;
+    stopDriving();
+    if (destination !== null) arrive(destination);
   });
   window.addEventListener('hashchange', () => {
     const linked = stopFromHash();

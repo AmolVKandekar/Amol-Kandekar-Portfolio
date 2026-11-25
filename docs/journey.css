@@ -204,8 +204,10 @@
 
 .walk-controls p { color: var(--muted); font-size: .875rem; }
 .walk-buttons { display: flex; gap: .5rem; flex-wrap: wrap; }
+.move-buttons { display: flex; gap: .35rem; }
+.move-buttons .button { touch-action: none; user-select: none; }
+.move-buttons .button:active { background: var(--accent); color: var(--bg); transform: none; }
 .walk-buttons .button { min-height: 2.65rem; padding: .55rem .84rem; }
-.walk-buttons .button:disabled { opacity: .48; cursor: default; transform: none; }
 .motion-toggle { display: inline-flex; align-items: center; gap: .55rem; padding: .55rem .35rem; border: 0; background: transparent; color: var(--muted); font-size: .875rem; cursor: pointer; }
 .motion-toggle:hover { color: var(--accent); }
 .motion-icon { width: .59rem; height: .72rem; border-inline: 2px solid var(--accent); }

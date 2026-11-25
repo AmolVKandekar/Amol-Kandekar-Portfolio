@@ -35,7 +35,7 @@ The project repositories contain reproducible portfolio demos. The prediction pr
     cd Amol-Kandekar-Portfolio
     python -m http.server 8765 --bind 127.0.0.1 --directory docs
 
-Open `http://127.0.0.1:8765`. Git submodules pin the project source revisions. GitHub Pages serves the career journey, project case studies, and public résumé copy from `docs/`. Use the buttons or keyboard arrows on the scene to move between stops.
+Open `http://127.0.0.1:8765`. Git submodules pin the project source revisions. GitHub Pages serves the career journey, project case studies, and public résumé copy from `docs/`. Hold Left or Right to walk. With the scene focused, use A/D or the arrow keys to move and E to open the building. Next stop provides guided navigation.
 
 ## Artwork
 
